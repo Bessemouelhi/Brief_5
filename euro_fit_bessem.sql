@@ -1,4 +1,3 @@
-
 -- Création de la base de données si elle n'existe pas
 CREATE SCHEMA IF NOT EXISTS euro_fit_bessem
 -- on défini le codage des caractères
@@ -124,6 +123,3 @@ PRIMARY KEY (id_activite_client),
 CONSTRAINT `fk_id_clients` FOREIGN KEY (id_client) REFERENCES clients (id_client) ON DELETE SET NULL ON UPDATE CASCADE,
 CONSTRAINT `fk_id_activite` FOREIGN KEY (id_activite) REFERENCES activite (id_activite) ON DELETE SET NULL ON UPDATE CASCADE
 );
-
-ALTER TABLE adresse
-RENAME COLUMN vile_adresse to ville_adresse;
